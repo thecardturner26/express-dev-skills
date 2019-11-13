@@ -10,11 +10,11 @@
     <body>
         <h1>Skills</h1>
         <ul>
-          <% skills.forEach(function(t) { %>
+          <% skills.forEach(function(t,idx) { %>
             <li>
-              <%= t.skill %>
+                <a href="/skills/<%= idx %>"><%= t.skill %></a>
                 - 
-              <%= t.done ? 'done' : 'not done' %>
+              <%= t.proficient ? 'done' : 'not done' %>
             </li>
           <% }); %>
         </ul>

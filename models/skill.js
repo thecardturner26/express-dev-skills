@@ -12,3 +12,7 @@ module.exports = {
 function getAll(){
     return skills;
 }
+
+function getOne (id) {
+    return skills[id]
+}
