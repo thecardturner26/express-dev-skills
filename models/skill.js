@@ -1,18 +1,19 @@
 const skills = [
+    {skill: 'CSS', proficient: true},
     {skill: 'HTML', proficient: true},
-    {skill: 'CSS', proficient: false},
-    {skill: 'JS', proficient: false}
-  ];
-
+    {skill: 'JS', proficient: true},
+    {skill: 'PYTHON', proficient: false}
+];
 
 module.exports = {
-    getAll
-}
+    getAll,
+    getOne
+};
 
-function getAll(){
+function getAll() {
     return skills;
 }
 
 function getOne (id) {
-    return skills[id]
+    return skills[id];
 }

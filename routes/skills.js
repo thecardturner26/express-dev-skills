@@ -1,27 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var Skill = require('../models/skill');
-var skillsCtrl = require('../controllers/skills')
-/* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
+var skillsCtrl = require('../controllers/skills');
 
 
-router.get('/', function(req, res) {
-  res.render('skills/index', {
-    skills: Skill.getAll()
-  });
-});
-
-//todos: todoDb.getAll()
+/* GET skills listing. */
 
 router.get('/', skillsCtrl.index);
 router.get('/:id', skillsCtrl.show);
 
-
 module.exports = router;
-
 
 
 // var express = require('express');
